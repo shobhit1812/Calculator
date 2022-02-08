@@ -24,10 +24,6 @@ body{
   flex-direction: column;
 }
 
-.container{
-  padding-top: 60px;
-}
-
 body.active1{
   background-color: var(--mainbg1color);
 }
