@@ -1,0 +1,254 @@
+*{
+  padding: 0;
+  margin: 1px 0 0 0;
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
+}
+
+:root{
+  --mainbgcolor:hsl(222, 26%, 31%);
+  --mainbg1color:hsl(0, 0%, 90%);
+  --mainbg2color:hsl(268, 75%, 9%);
+  --twotkbg:hsl(0, 5%, 81%);
+  --tbgkbgsbg: hsl(268, 71%, 12%);
+}
+
+body{
+  width: 100%;
+  max-width: 1440px;
+  background-color: var(--mainbgcolor);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container{
+  padding-top: 60px;
+}
+
+body.active1{
+  background-color: var(--mainbg1color);
+}
+
+body.active1 .btn{
+  background-color: var(--twotkbg);
+}
+
+body.active2{
+  background-color: var(--mainbg2color);
+}
+
+body.active2 .btn{
+  background-color: var(--tbgkbgsbg);
+}
+
+h1{
+  color: #fff;
+}
+
+body.active1 .toggle h1{
+  color: #111;
+}
+
+body.active2 .toggle h1{
+  color: hsl(52, 100%, 62%);
+}
+
+.toggle{
+  display: flex;
+  justify-content: space-between;
+}
+
+.right{
+  font-size: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.toggle p{
+  margin: 0 6px;        /* Spaces Between 1 2 3 */
+  color: #fff;
+  cursor: pointer;
+}
+
+body.active1 .control p{
+  color: #111;
+}
+
+body.active2 .control p{
+  color: hsl(52, 100%, 62%);
+
+}
+
+body.active1 .right p{
+  color: #111;
+}
+
+body.active2 .right p{
+  color: hsl(52, 100%, 62%);
+}
+
+.control{
+  margin-top: -17px;
+  font-size: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.control p{
+  color: #fff;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.control .box{
+  width: 56px;
+  height: 15px;
+  background-color: hsl(224, 36%, 15%);
+  border-radius: 30px;
+  margin: -2px -1px 0 15px;
+  /* margin-top: 1px;
+  margin-left: 9px; */
+  position: relative;
+}
+
+body.active1 .control .box{
+  background-color: var(--twotkbg);
+}
+
+
+body.active2 .control .box{
+  background-color: var(--tbgkbgsbg);
+}
+
+.control #circle{
+  width: 11px;
+  height: 11px;
+  background-color: hsl(6, 63%, 50%);
+  position: absolute;
+  margin-left: 3px;
+  margin-top: 2px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+body.active1 .control #circle{
+  background-color: hsl(25, 98%, 40%);
+}
+
+body.active2 .control #circle{
+  background-color: hsl(176, 100%, 44%);
+}
+
+.screen{
+  width: 450px;
+}
+
+#screen{
+  width: 100%;
+  height: 100px;
+  margin: 10px 0;
+  text-align: right;
+  font-size: 32px;
+  background-color: hsl(224, 36%, 15%);
+  color: #fff;
+  border: 0;
+  outline: none;
+  border-radius: 7px;
+}
+
+body.active1 #screen{
+  background-color: hsl(0, 0%, 93%);
+  color: #111;
+}
+
+body.active2 #screen{
+  background-color: var(--tbgkbgsbg);
+  color: hsl(52, 100%, 62%);
+}
+
+.btn{
+  display: flex;
+  width: 450px;
+  flex-flow: wrap;
+  background-color: hsl(224, 36%, 15%);
+  padding: 10px 10px;
+  margin: 8px 0;
+  border-radius: 7px;  /* Key Pad Layout Wala */
+}
+
+button{
+  width: 90px;
+  margin: 10px 8.5px;
+  padding: 15px;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0px 3px 0px 0px gray;
+  color: hsl(221, 14%, 31%);
+}
+
+body.active1 button{
+  color: black;
+  box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+}
+
+body.active2 button{
+  background-color: hsl(281, 89%, 26%);
+  box-shadow: 0px 3px 0px 0px hsl(285, 91%, 52%);
+  color: hsl(52, 100%, 62%);
+}
+
+.num{
+  font-size: 32px;
+}
+
+.reset, .del{
+  box-shadow: 0px 3px 0px 0px hsl(224, 28%, 35%);
+  background-color: hsl(225, 21%, 49%);
+  color: #fff !important;
+  font-size: 18px;
+}
+
+body.active1 .reset, body.active1 .del{
+  box-shadow: 0px 3px 0px 0px hsl(185, 58%, 25%);
+  background-color: hsl(185, 42%, 37%);
+}
+
+body.active2 .reset, body.active2 .del{
+  box-shadow: 0px 3px 0px 0px hsl(285, 91%, 52%);
+  background-color: hsl(281, 89%, 26%);
+}
+
+.equal{
+  box-shadow: 0px 3px 0px 0px hsl(6, 70%, 34%);
+  background-color: hsl(6, 63%, 50%);
+}
+
+body.active1 .equal{
+  box-shadow: 0px 3px 0px 0px hsl(25, 99%, 27%);
+  background-color:   hsl(25, 98%, 40%);
+}
+
+body.active2 .equal{
+  box-shadow: 0px 3px 0px 0px hsl(177, 92%, 70%);
+  background-color:   hsl(176, 100%, 44%);
+}
+
+.operators{
+  font-size: 28px;
+}
+
+.reset, .equal{
+  width: 197px;
+  font-size: 18px;
+  color: #fff !important;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: greenyellow }
